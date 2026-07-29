@@ -1,128 +1,141 @@
 # Roadmap / 路线图
 
-Iris Commons采用“先验证协作方法，再开发独立平台”的路线。各阶段没有固定日期，以可验证结果作为进入下一阶段的条件。
+Iris Commons follows one rule: **test the collaboration method before building a large platform or organization.** Progress is defined by evidence, not document count.
 
-## 阶段0：公开论证
+## Phase 0: Open design / 阶段0：公开设计
 
-目标：确认问题是否真实、项目边界是否合理。
+Completed foundations:
 
-- [x] 建立公开仓库；
-- [x] 发布愿景、架构和治理草案；
-- [x] 确认Iris Commons名称与彩虹隐喻；
-- [x] 定义“母语表达、英文互操作”的语言原则；
-- [x] 定义AI参与和人工授权边界；
-- [x] 建立AI优先的参与说明；
-- [x] 区分数据公开级别与内容生命周期；
-- [x] 建立Proposal、Research、Specification、Decision和Archive目录职责；
-- [ ] 收集不同语言和专业背景的实质性批评；
-- [ ] 调研类似开放科学、知识协作和AI代理项目；
-- [ ] 建立首批跨语言维护和审查规则。
+- [x] public repository and multilingual README;
+- [x] AI-first participation model;
+- [x] native-language expression and English interoperability policy;
+- [x] D0–D3 data classification;
+- [x] communication-object and content-lifecycle routing;
+- [x] reusable independent-project template model;
+- [x] current MVP governance and optional future governance modules;
+- [x] progressive newcomer and AI entry through `START_HERE.md`.
 
-退出条件：核心构想获得至少三类角色的实质性评议，例如研究者、开源维护者、安全或数据治理人员，并包含至少两种语言视角。
+Still required:
 
-## 阶段1：GitHub-only MVP
+- [ ] substantive critique from additional languages and professional backgrounds;
+- [ ] proof that the simplified entry works for real newcomers;
+- [ ] evidence from real public collaboration rather than further abstract expansion.
 
-目标：不开发独立平台，验证普通参与者能否通过AI完成最小协作闭环。
+Exit condition: at least three relevant participant perspectives, including more than one language, have reviewed the core assumptions and at least one real contribution has used the workflow.
 
-- [x] 发布AI秘书协议草案；
-- [x] 发布语言政策；
-- [x] 发布D0–D3数据分类规则；
-- [x] 发布内容生命周期与仓库路由规则；
-- [x] 发布通用AI代理指令 `AGENTS.md`；
-- [x] 发布ChatGPT、Codex、Gemini、Claude和Copilot参与指南；
-- [x] 配置双语Issue和PR模板的核心入口；
-- [x] 在PR模板中加入分类、状态和目标目录检查；
-- [ ] 定义可验证的研究记录YAML Schema；
-- [ ] 定义Proposal和Decision的编号与元数据生成流程；
-- [ ] 设计状态、证据、领域和风险标签；
-- [ ] 验证至少两类AI客户端自动读取分类与路由规则；
-- [ ] 让一名不熟悉GitHub的参与者在AI帮助下完成Issue；
-- [ ] 让一名贡献者通过AI完成Fork、修改和Pull Request；
-- [ ] 验证AI能把普通想法保留在Issue，而不错误写入长期目录；
-- [ ] 验证AI能阻止D1、D2或D3内容进入公共仓库；
-- [ ] 建立一个真实公益课题试验；
-- [ ] 完成一次“原始问题→多语言讨论→提案→审查→成果”的闭环；
-- [ ] 记录参与成本、误解、翻译偏差、分类错误、路由错误和治理冲突。
+## Phase 1: GitHub-only MVP / 阶段1：GitHub最小验证
 
-退出条件：至少一个项目由两种以上语言的参与者完成可追溯协作闭环，并有普通用户无需自行学习GitHub即可完成有效贡献。
+### Entry and cognitive load
 
-## 阶段2：自动化辅助
+- [x] create a one-screen progressive entry;
+- [x] require AI to read `START_HERE.md → AGENTS.md → task-specific rules`;
+- [x] shorten the main AI participation guide;
+- [x] move detailed client setup into `docs/guides/`;
+- [ ] run URL-only onboarding with at least two AI client configurations;
+- [ ] confirm that users receive an executable next step without irrelevant protocol summaries;
+- [ ] confirm that users are not told to read multiple files before contributing.
 
-目标：减少GitHub使用门槛，但不增加AI最终决定权。
+### Protocol compliance
 
-候选能力：
+- [x] define the five-case minimal compliance suite T1–T5;
+- [x] define a common result record and failure categories;
+- [ ] run all five cases with at least two AI client configurations;
+- [ ] publish safe raw interactions and actual tool actions;
+- [ ] identify model, client, protocol and operator failures;
+- [ ] revise rules based on reproducible failures rather than preferences.
 
-- AI自动发现项目指令和相关Issue；
-- 新参与者个性化引导；
-- D0–D3分类检查与公开前警告；
-- 目录和生命周期路由建议；
-- 阻止无Issue依据的`specs/`修改；
-- 元数据和模板校验；
-- `source_language`和BCP 47格式检查；
-- 原文、译文和源commit关联检查；
-- 过期译文检测；
-- 引用失效检测；
-- AI参与声明检查；
-- Issue摘要和重复问题提示；
-- 多语言派生视图生成；
-- 敏感信息和提示注入初筛；
-- 当前规范与Archive冲突检测；
-- 可导出的项目索引。
+### Governance
 
-退出条件：自动化能明显降低参与和维护成本，同时不会自动公开私人内容、自动接受研究结论、错误升级普通想法或系统性压低特定语言内容。
+- [x] activate only Maintainer + temporary human Reviewer + simple appeal path;
+- [x] mark expanded team roles as optional and inactive;
+- [x] define evidence-based activation conditions for additional roles;
+- [ ] demonstrate that the first pilot can operate without creating permanent committees;
+- [ ] invite external review for any major rule change or Maintainer conflict.
 
-## 阶段3：跨平台数据层
+### First public-interest pilot
 
-目标：突破单个GitHub仓库的容量与平台限制。
+- [x] define workflow-first pilot selection criteria;
+- [x] add timebox, genuine disagreement, verification and process metrics to the pilot template;
+- [ ] collect approximately three to five candidate proposals when practical;
+- [ ] select a one-to-two-week public-source pilot;
+- [ ] embed URL-only onboarding and relevant T1–T5 checks;
+- [ ] preserve at least one Chinese–English source, translation and review chain;
+- [ ] complete Question → Issue → work record → review → deliverable;
+- [ ] publish workflow lessons and protocol changes.
 
-候选集成：
+### Portable records and compatibility
 
-- S3兼容对象存储；
-- DVC或lakeFS数据版本；
-- OSF项目门户；
-- JupyterHub计算；
-- Zenodo长期归档和DOI；
-- Hugging Face模型与数据集；
-- Codeberg、Forgejo或GitLab镜像；
-- D2受限数据的独立访问控制和引用机制。
+- [x] limit MVP compatibility to auditable GitHub records, portable metadata and Markdown/JSON export;
+- [x] define demand-driven one-page mapping decisions;
+- [ ] define a minimal research-record JSON or YAML Schema;
+- [ ] test only a demonstrated need against RO-Crate, DataCite or PROV-O;
+- [ ] avoid direct OSF, Zenodo, Dataverse, Wikibase, ActivityPub, DVC or lakeFS integration until a pilot requires it.
 
-退出条件：仓库可以引用、验证和迁移外部数据，而不丢失来源、版本、语言关系、分类和许可信息。
+### Contribution workflow
 
-## 阶段4：开放协议与多客户端
+- [ ] let a newcomer complete a compliant Issue through AI;
+- [ ] let a contributor complete Fork → change → Pull Request through AI;
+- [ ] prove ordinary ideas remain in Issues rather than being incorrectly promoted to long-lived files;
+- [ ] record participation time, human corrections, translation drift, routing errors and governance friction.
 
-目标：让不同AI秘书和前端使用统一协议参与同一项目。
+Phase 1 exit condition:
 
-- AI秘书能力声明；
-- 客户端自动发现文件约定；
-- 最小权限授权；
-- 标准研究事件格式；
-- 数据分类与公开授权事件；
-- 内容生命周期和路由事件；
-- 原文、翻译、摘要和语义差异模型；
-- 人类身份、代理行为和审查记录；
-- 导入与导出工具；
-- 兼容MCP、REST和其他开放接口；
-- 不依赖单一GitHub、模型或AI客户端的兼容性测试。
+> At least one small public pilot is completed by participants using more than one language and at least two AI client configurations, with traceable authorization, review, test records and a reproducible deliverable.
 
-退出条件：至少两个不同模型供应商或本地模型客户端能够使用同一协议完成Issue和PR协作，并保持一致的授权、分类、路由与审计边界。
+## Phase 2: Bounded automation / 阶段2：受控自动化
 
-## 阶段5：分布式公益研究网络
+Only automate failures or costs demonstrated in Phase 1. Candidate capabilities:
 
-这是长期探索方向，不是当前承诺：
+- metadata and schema checks;
+- source-language and translation-status checks;
+- duplicate and related-work suggestions;
+- stale translation detection;
+- D0–D3 warnings;
+- invalid lifecycle-route warnings;
+- prevention of ungrounded `specs/` changes;
+- citation and link checks;
+- safe export indexes;
+- compliance-test execution assistance.
 
-- 多组织共同治理；
-- 跨仓库研究发现、翻译和引用；
-- 公共算力和数据资助机制；
-- 贡献信用与可验证归属；
-- 对高风险领域的专业伦理和访问控制；
-- 面向非技术用户的AI原生公共入口；
-- 防止商业平台、模型供应商、英语优势或单一维护团队形成不可替代控制。
+Automation must not publish private content, accept research conclusions, set final priority or systematically disadvantage a language.
 
-## 当前优先级
+## Phase 3: External data and preservation / 阶段3：外部数据与归档
 
-1. 邀请真实用户通过AI完成首次参与；
-2. 测试AI是否正确执行D0–D3分类和内容路由；
-3. 完善研究记录Schema、Proposal编号和双语模板；
-4. 找到语言、权限、分类和AI代理流程中的失败条件；
-5. 选择真实公益试验课题；
-6. 再决定需要开发哪些独立软件。
+Possible integrations are triggered by real pilot needs:
+
+- object storage for large D0 data;
+- controlled storage for D2 references;
+- data versioning;
+- research portals;
+- computational notebooks;
+- DOI and long-term archives;
+- model and dataset registries;
+- Git platform mirrors.
+
+Every integration must preserve provenance, language, classification, license and exportability without making the public record dependent on one provider.
+
+## Phase 4: Open protocol and multiple clients / 阶段4：开放协议与多客户端
+
+Potential outputs:
+
+- AI capability declarations;
+- client discovery conventions;
+- scoped authorization events;
+- portable research events;
+- multilingual source/translation relationships;
+- human and AI action records;
+- import and export tools;
+- MCP, REST or equivalent interfaces;
+- cross-provider compatibility tests.
+
+Exit condition: at least two different AI/client implementations can complete the same Issue and PR workflow while preserving authorization and audit boundaries.
+
+## Current priority / 当前优先级
+
+1. Run T1–T5 on two real AI client configurations.
+2. Run the URL-only newcomer test.
+3. Collect and select the first small public-interest pilot.
+4. Produce the first portable research-record Schema from pilot needs.
+5. Change or remove rules that fail in practice.
+
+Do not add a new platform integration, committee or large protocol layer unless these tests demonstrate the need.
