@@ -1,73 +1,116 @@
-name: 公益试验项目提案
-about: 提议一个真实课题，用于验证Iris Commons协作流程
+name: Public-interest pilot project / 公益试验项目提案
+description: Propose a real project to test the Iris Commons workflow / 提议真实课题以验证Iris Commons协作流程
 title: "[Pilot] "
 labels:
   - pilot
   - proposal
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Propose a specific, limited and verifiable public-interest project. You may use any language and ask an AI assistant to complete the GitHub form.
+        请提出具体、有限、可验证的公益项目。可以使用任何语言，也可以让AI代为完成GitHub表单。
+
+        The AI must preserve your original meaning, identify risks and obtain your confirmation before submission.
+        AI必须保留原意、识别风险，并在提交前取得你的确认。
+
+  - type: input
+    id: source_language
+    attributes:
+      label: Source language / 提案原始语言
+      description: Use a BCP 47 language tag / 请使用BCP 47语言标签
+      placeholder: zh-CN / en / ja / es / ar
+    validations:
+      required: true
+
   - type: textarea
     id: problem
     attributes:
-      label: 要解决的公益问题
-      description: 请给出具体、有限、可验证的问题，而不是宽泛主题。
+      label: Public-interest problem / 要解决的公益问题
+      description: Define a specific, limited and verifiable problem rather than a broad topic. / 请给出具体、有限、可验证的问题，而不是宽泛主题。
     validations:
       required: true
+
+  - type: textarea
+    id: original_statement
+    attributes:
+      label: Original proposal / 原始提案表达
+      description: Preserve the proposer's original wording where it carries meaning or context. / 对具有语义和语境价值的内容保留提案者原始表达。
+
+  - type: textarea
+    id: bridge_summary
+    attributes:
+      label: Optional bridge summary / 可选桥接摘要
+      description: A short English or other-language summary for cross-language discovery. Mark AI-generated summaries. / 用英文或其他语言提供便于跨语言发现的摘要；AI生成时请标明。
+
   - type: textarea
     id: beneficiaries
     attributes:
-      label: 受益对象与公共价值
+      label: Beneficiaries and public value / 受益对象与公共价值
     validations:
       required: true
+
   - type: textarea
     id: deliverable
     attributes:
-      label: 可交付成果
-      description: 例如开放报告、数据说明、原型、复现实验或公共指南。
+      label: Verifiable deliverables / 可验证交付成果
+      description: Open report, dataset documentation, prototype, reproduction, public guide or other reviewable result. / 例如开放报告、数据说明、原型、复现实验或公共指南。
     validations:
       required: true
+
   - type: textarea
-    id: collaboration
+    id: collaboration_need
     attributes:
-      label: 为什么需要跨语言或人机协作？
+      label: Why multilingual or human-AI collaboration is needed / 为什么需要跨语言或人机协作
     validations:
       required: true
+
   - type: textarea
-    id: data
+    id: data_and_license
     attributes:
-      label: 数据、资料和许可证
-      description: 数据从哪里来？是否包含个人、受限或高风险信息？
+      label: Data, sources and licenses / 数据、资料和许可证
+      description: Where will materials come from? Do they include personal, restricted or high-risk information? / 数据从哪里来？是否包含个人、受限或高风险信息？
+
   - type: textarea
-    id: method
+    id: method_and_validation
     attributes:
-      label: 初步方法与验证标准
+      label: Initial method and validation criteria / 初步方法与验证标准
+
   - type: textarea
     id: risks
     attributes:
-      label: 伦理、安全、隐私与误用风险
+      label: Ethics, safety, privacy and misuse risks / 伦理、安全、隐私与误用风险
     validations:
       required: true
+
   - type: textarea
-    id: skills
+    id: required_skills
     attributes:
-      label: 需要的参与者和能力
-  - type: input
-    id: language
-    attributes:
-      label: 提案原始语言
-      placeholder: zh-CN / en / ja / other
-    validations:
-      required: true
+      label: Participants and capabilities needed / 需要的参与者和能力
+
   - type: dropdown
-    id: ai_used
+    id: ai_assistance_status
     attributes:
-      label: 是否使用AI辅助？
+      label: AI assistance / AI辅助情况
       options:
-        - 否
-        - 是，已人工审阅
-        - 是，但尚未完整核查
+        - No AI assistance / 未使用AI
+        - AI-assisted and human-reviewed / 使用AI且已人工审阅
+        - AI-assisted but not fully verified / 使用AI但尚未完整核查
     validations:
       required: true
+
   - type: textarea
-    id: ai_details
+    id: ai_assistance_details
     attributes:
-      label: AI参与说明
+      label: AI role and disclosure / AI角色与披露
+      description: Model/provider, roles, translation method and human changes. Do not disclose private prompts. / 可填写模型、角色、翻译方式及人工修改情况；无需公开私人提示词。
+
+  - type: checkboxes
+    id: public_authorization
+    attributes:
+      label: Public authorization / 公开授权
+      options:
+        - label: I confirm that I may publish this proposal and have removed private data, credentials and unauthorized material. / 我确认有权公开该提案，并已移除隐私、密钥和未授权材料。
+          required: true
+        - label: I reviewed the final public text, including AI-generated translations or rewrites. / 我已审阅最终公开文本，包括AI生成的翻译或改写。
+          required: true
