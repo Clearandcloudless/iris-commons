@@ -1,315 +1,203 @@
-# Governance / 治理规则（草案）
+# Governance / 当前治理规则
 
-Iris Commons 当前处于公开论证阶段。本文件建立最低限度的决策、权限、语言和责任规则，后续由社区通过Issue与Pull Request修订。
+Status: `draft-0.2`  
+Current mode: **MVP Governance**
 
-具体的团队角色、问题排序、目标立项、正式审查和发布规则见 [`TEAM_GOVERNANCE.md`](TEAM_GOVERNANCE.md)；GitHub对象之间的交流与流转规则见 [`COMMUNICATION_PROTOCOL.md`](COMMUNICATION_PROTOCOL.md)。
+This file is the current operational governance for Iris Commons. The broader role catalogue in [`TEAM_GOVERNANCE.md`](TEAM_GOVERNANCE.md) is an optional expansion model and is **not currently active**.
 
-## 治理目标
+本文件是Iris Commons当前生效的最小治理规则。`TEAM_GOVERNANCE.md`中的完整角色体系属于未来可选扩展，不代表这些职位已经设立，也不得阻塞当前试验和普通贡献。
 
-- 让思想尽可能无障碍地进入讨论；
-- 让不熟悉GitHub的人能够通过AI参与；
-- 防止AI、维护者、英语优势或多数意见垄断表达；
-- 保留原文、分歧、来源和决策过程；
-- 在开放协作与隐私、安全、版权之间建立边界；
-- 使规则能够迁移到其他模型和平台；
-- 使任何团队能够复制本模板并建立独立治理的公共项目；
-- 以公开职能和权限边界替代不透明的个人裁量。
+## 1. Current active roles / 当前生效角色
 
-## 模板与独立项目
+### Maintainer / 维护者
 
-Iris Commons提供可复制的GitHub仓库结构、文档协议和参考治理方法，不是复制项目的中央管理机构。
+The repository owner currently acts as Maintainer and is responsible for:
 
-使用本模板建立的新项目：
+- repository settings, labels, templates and branch protection;
+- executing merges after required review;
+- recording reasons for material repository actions;
+- responding to privacy, security and abuse incidents;
+- keeping current rules distinguishable from proposals and archived material.
 
-- 拥有独立名称、范围、维护者、治理和知识库；
-- 不需要向Iris Commons注册；
-- 不需要与其他复制项目互联或同步；
-- 不需要向Iris Commons提交研究成果；
-- 可以修改本模板，但应向本项目参与者公开当前有效规则；
-- 可以自愿将具有通用价值的模板改进反馈给Iris Commons。
+The Maintainer is not the final judge of research truth and may not be the sole approver of their own major governance, specification or research work.
 
-## 参与权
+### Temporary human Reviewer / 临时人类审查者
 
-参与者可以：
+Reviewers are invited per Issue or Pull Request. There are no permanent review seats in the MVP stage.
 
-- 使用任何语言表达；
-- 使用自己选择的AI助手；
-- 要求保留原文和不同意见；
-- 质疑项目、维护者和AI的结论；
-- 要求说明内容如何翻译、总结或形成；
-- 在公开前决定是否授权自己的内容进入仓库；
-- 要求复核自动分类、关闭、排序、翻译或摘要；
-- 通过证据、反例、审查、翻译、复现和程序监督参与，而不必提交代码。
-
-参与者不因以下原因被降低优先级：
-
-- 不熟悉GitHub；
-- 不使用英语；
-- 没有使用最新或最昂贵的模型；
-- 表达方式不符合学术或工程惯例；
-- 提出少数意见；
-- 没有大量commit、评论或社交影响力。
-
-观点仍需接受证据、逻辑、伦理和安全审查。
-
-## 治理职能而非固定官僚结构
-
-项目应先定义治理职能和权限，再决定是否成立委员会。小项目可以由少数人兼任多个角色，但不能取消独立审查和公开决策记录。
-
-最低职能包括：
-
-- **Maintainer / 项目维护者**：管理仓库并执行已满足条件的合并和发布；
-- **Triage Steward / 议题管理员**：维护Discussion、Issue、标签、状态、重复和依赖；
-- **Roadmap Steward or Council / 路线管理员或路线小组**：维护问题池、优先级、目标和里程碑；
-- **Working Group / 临时工作组**：围绕已立项目标开展具体工作；
-- **Reviewer / 审查者**：按内容、证据、方法、语言、安全、伦理、治理或实现维度审查；
-- **Release Steward / 发布管理员**：检查版本条件并执行Release；
-- **Appeal Panel / 申诉小组**：复核程序、分类、排序、利益冲突和遗漏异议。
-
-组织名称可以不同，但谁负责上述职能、谁拥有权限以及如何申诉必须公开。详细规则见 [`TEAM_GOVERNANCE.md`](TEAM_GOVERNANCE.md)。
-
-## 决策层级
-
-### 日常编辑
-
-错别字、失效链接、格式调整、不改变含义的翻译修正和非关键元数据，可由一名维护者合并。
-
-日常编辑不得借机改变观点、归属、状态、结论或规范含义。
-
-### 项目与研究决策
-
-涉及问题池、优先级、目标立项、工作组、研究范围和验证标准的决定，应：
-
-1. 通过公开Issue说明问题；
-2. 记录相关证据、依赖、风险和替代方案；
-3. 由路线管理员或路线小组提出处理建议；
-4. 至少由一名未直接提出该决定的人类确认；
-5. 记录进入`Now / Next / Explore`、暂缓、阻塞或终止的理由。
-
-点赞、评论数量、语言优势或AI评分不能单独决定优先级。
-
-### 实质性修改
-
-涉及项目定位、数据结构、AI权限、语言规则、研究结论或贡献归属的修改，应：
-
-1. 通过Issue说明问题；
-2. 通过PR给出完整修改；
-3. 留出合理公开审查期；
-4. 至少由一名未直接起草该修改的人类审查者批准；
-5. 涉及特定语言语义时，尽量包含该语言使用者审查；
-6. 明确需要的审查维度和未解决异议。
-
-### 重大治理变更
-
-涉及许可证、维护者权限、隐私原则、规范语言、项目分叉或不可逆公开行为的变更，需要：
-
-- 标记为治理提案；
-- 说明影响对象、替代方案和风险；
-- 提供可理解的桥接摘要；
-- 设置合理公开审查期，默认建议14天；
-- 至少两名人类维护者批准；
-- 至少一名批准者未参与起草；
-- 在项目尚无足够维护者时，由项目所有者批准并记录理由与后续复核安排。
-
-AI可以起草和分析治理提案，但不能成为唯一提案责任主体、唯一审查者或最终批准者。
-
-## 问题清单、立项与路线图
-
-问题进入正式问题池前，可以使用：
+A Reviewer should state the dimensions actually reviewed, for example:
 
 ```text
-needs-context
-needs-evidence
-candidate
-accepted-backlog
-duplicate
-out-of-scope
-blocked
+content · sources · method · language · security · ethics · governance · implementation
 ```
 
-路线图建议使用：
+The Reviewer is responsible only for the dimensions they explicitly reviewed.
 
-```text
-Now      当前周期必须处理
-Next     下一阶段重点候选
-Explore  尚需研究、证据或试验
-```
+### Simple appeal path / 简易申诉路径
 
-正式立项目标至少应包含问题、范围、非范围、交付物、验证标准、负责人、审查者、依赖和停止条件。立项只表示允许开展组织化工作，不代表预先接受结论。
+A participant who disputes classification, closure, routing, translation, priority or review should first explain the objection in the relevant Issue.
 
-## 知识状态
+If the dispute cannot be resolved:
 
-建议使用以下状态，而不是简单区分“正确/错误”：
+- the Maintainer records a provisional, reviewable decision and reasons;
+- when the Maintainer has a conflict of interest, at least one external human participant must review the decision;
+- major rule changes also require at least one external human review during the MVP stage;
+- the decision may be reopened when new evidence or participants become available.
 
-```text
-idea → discussing → proposed → reviewed → accepted
-                               ↘ rejected
-accepted → reproduced → validated
-accepted → disputed → revised / withdrawn / superseded
-```
+No permanent Appeal Panel is active.
 
-- **idea**：未经系统论证的想法；
-- **discussing**：正在收集观点和资料；
-- **proposed**：已有可审查的明确提案；
-- **reviewed**：完成指定范围审查；
-- **accepted**：被项目暂时采纳；
-- **reproduced**：由独立参与者复现；
-- **validated**：达到事先约定的验证标准；
-- **disputed**：存在尚未解决的重要异议；
-- **withdrawn**：作者或维护者基于新证据撤回；
-- **superseded**：被后续内容明确替代。
+## 2. What is not currently active / 当前未启用的角色
 
-`accepted`不等于永恒真理。任何结论都可因新证据重新进入讨论。
+The following functions are described in `TEAM_GOVERNANCE.md` but are not currently staffed:
 
-## 决策方法
+- Triage Steward;
+- Roadmap Steward or Council;
+- permanent Working Group Lead positions;
+- Reviewer Pool or formal Review Board;
+- Release Steward as a separate office;
+- Ombudsperson or Appeal Panel.
 
-复杂研究和规范问题不应仅由简单多数票决定。推荐：
+The Maintainer may perform routine triage and release administration, and participants may form temporary working groups. Naming a future function does not create an office or an approval gate.
 
-> rough consensus + recorded objections + reviewable decision
+## 3. Activation conditions for expanded governance / 扩展治理启用条件
 
-即形成足以推进工作的粗略共识，同时记录重要异议、适用边界、验证条件和未来复核路径。
+An additional role or committee should be activated only when a real operating need is recorded in an Issue. Relevant signals include:
 
-可能结果包括：接受、限制范围后接受、接受但标记争议、先开展试点、保留并行方案、退回补充证据、暂缓、拒绝、撤回或被替代。
+- at least four consistently active human contributors over multiple weeks;
+- two or more concurrent workstreams that cannot be coordinated informally;
+- recurring releases that require a separate release check;
+- repeated triage or prioritization disputes;
+- repeated conflicts of interest or appeals;
+- high-impact research, privacy, security or ethical risk requiring specialist review;
+- a workload that causes the current Maintainer to become a bottleneck.
 
-## AI作为参与接口
+The activation Issue must define:
 
-AI可以代表用户处理GitHub操作，但不能代表用户作出未授权的公共表达。
+- the problem the role solves;
+- its powers and limits;
+- who appoints or removes the role;
+- duration or review date;
+- conflicts of interest;
+- appeal and audit path;
+- conditions for dissolving the role.
 
-推荐过程：
+Expanded governance is not a maturity badge. Roles should be removed or combined when the need disappears.
 
-```text
-用户自然语言表达
-  → AI读取项目规则
-  → AI形成私有草稿
-  → AI标记风险和不确定性
-  → 用户审阅并明确确认
-  → AI使用用户身份公开提交
-```
+## 4. Decision levels / 决策层级
 
-“用户曾经说过”“AI可以访问”或“用户连接了GitHub”均不等于用户授权公开。
+### Routine maintenance
 
-## AI参与规则
+Typos, broken links, formatting, non-semantic translation corrections and non-critical metadata may be merged by the Maintainer.
 
-AI参与内容应尽量说明：
+Routine edits must not change authorship, meaning, status, conclusions or normative rules.
 
-- 模型提供方和模型名称；
-- AI承担的角色；
-- 输入是否包含未公开信息；
-- 人类是否审阅和修改；
-- 外部事实是否经过核查；
-- 是否使用了GitHub写入工具。
+### Ordinary substantive work
 
-AI不得作为：
+A document, research record, protocol or implementation change should:
 
-- 法律、伦理或许可意义上的最终授权人；
-- 关键结论的唯一审查者；
-- 贡献者身份的冒名替代者；
-- 关键分支合并的独立决策者；
-- 规范语言争议中原作者意图的替代者；
-- 委员会成员或正式投票者；
-- 维护者、审查者或工作组负责人的任命者；
-- 问题优先级、立项或正式版本生效的最终决定者。
+1. have a relevant Issue or clearly recorded basis;
+2. be submitted through a focused Pull Request;
+3. identify data classification, source language, AI assistance and target area;
+4. receive at least one human review when it changes material meaning;
+5. be merged by the Maintainer after blocking concerns are resolved or explicitly recorded.
 
-多个AI给出相同结论不能替代独立证据，因为模型可能共享训练材料、检索来源或系统性偏差。
+### Major governance, license or irreversible changes
 
-## 公开写入确认
+Changes to licenses, Maintainer powers, privacy boundaries, AI public-write authority, normative language or irreversible public history require:
 
-创建或修改以下公共对象前，AI应展示最终内容或diff并取得明确确认：
+- a clearly marked governance proposal;
+- alternatives, impact and risks;
+- a public review period appropriate to the impact;
+- at least one external human reviewer while the project has only one Maintainer;
+- a recorded decision and follow-up review plan.
 
-- Discussion；
-- Issue；
-- Comment；
-- Branch；
-- Commit；
-- Pull Request；
-- Review；
-- Wiki或其他公共记录。
+The project does not require two Maintainers before it has two qualified Maintainers. It requires external review so that the sole Maintainer does not self-approve major changes.
 
-对同一明确任务的连续低风险修订，可以由用户一次授权限定范围；超出范围、改变含义或增加敏感信息时必须重新确认。
+## 5. Decision method / 决策方法
 
-以下操作始终需要单独明确确认或由人类执行：
+The default method is:
 
-- 合并主分支；
-- 发布Release；
-- 修改许可证和治理；
-- 修改权限、Secrets或安全工作流；
-- 删除或隐藏公共历史；
-- 批量关闭讨论；
-- 将私人内容转为公开内容；
-- 宣布Proposal、Research Result或Specification正式生效。
+> **rough consensus + recorded objections + reviewable decision**
 
-## 正式审查与发布
+A decision may be accepted, narrowed, piloted, marked disputed, returned for evidence, deferred, rejected, withdrawn or superseded.
 
-正式规范、治理文件和高影响研究通常应：
+Votes, reactions, comment counts, English fluency or agreement between AI models do not by themselves establish priority or truth.
 
-- 关联Issue或Proposal；
-- 明确版本、范围和兼容性；
-- 至少由两名人类审查；
-- 至少一名审查者未参与起草；
-- 记录重要异议；
-- 经过合理公开审查期；
-- 由发布管理员检查后创建Release。
+## 6. Participation rights / 参与权
 
-一般正式规范建议公开审查7天，重大治理修改建议14天。紧急安全修订可以先临时执行，但必须尽快补充公开复核。
+Participants may:
 
-## 多语言治理
+- use any language;
+- use an AI assistant of their choice;
+- preserve original wording and minority opinions;
+- question project, Maintainer and AI decisions;
+- request review of classification, translation, routing or closure;
+- contribute through evidence, critique, translation, synthesis, reproduction or review without writing code.
 
-完整规则见 [`LANGUAGE_POLICY.md`](LANGUAGE_POLICY.md)。治理底线是：
+No contribution should be deprioritized solely because the participant does not know GitHub, does not use English or does not use an expensive model.
 
-- 参与者可以使用任何语言提交内容；
-- 不得仅因语言不同降低优先级；
-- 参与者原文是其观点的权威表达；
-- 译文和摘要应标明机器或人工处理方式；
-- 英文桥接摘要不能成为参与门槛；
-- 仓库路径、字段ID、标签、状态和接口使用英文；
-- 协议规范可以建立英文normative版本，但不得反向覆盖参与者原意；
-- 出现语义争议时，应邀请原作者或该语言审查者确认；
-- 过期译文必须标记，不得静默展示为最新；
-- 改变语言政策需要跨语言公开审查。
+Claims remain subject to evidence, logic, ethics and safety review.
 
-## 维护者与AI工具
+## 7. AI authority boundary / AI权限边界
 
-维护者可以使用AI协助分类、总结、翻译和检查，但：
+AI may:
 
-- AI不得根据语言自动降低内容优先级；
-- AI生成的关闭理由必须由人类审阅；
-- 自动标签、评分和重复Issue判断必须可申诉；
-- AI摘要不得删除关键异议；
-- 自动化规则和权限应公开记录；
-- 社区有权要求停用造成系统性问题的AI流程。
+- explain the project and recommend current Issues;
+- prepare private drafts;
+- classify and route content as a recommendation;
+- search for related work;
+- prepare summaries, translations, reviews and diffs;
+- execute a scoped public write after the human confirms that exact content.
 
-## 利益冲突
+AI may not independently:
 
-审查者、路线成员、维护者或工作组负责人若与提案存在直接利益、组织关系、资金关系或共同作者关系，应主动披露。存在利益冲突不必自动退出讨论，但不得作为唯一批准者。
+- authorize private material for publication;
+- close significant Issues or reject proposals;
+- set final priority;
+- appoint people or create governance offices;
+- approve its own draft;
+- merge protected branches;
+- declare research, decisions or specifications accepted;
+- publish Releases;
+- change licenses, permissions, Secrets or governance.
 
-AI无法承担法律意义上的利益冲突披露责任；使用者应披露已知的模型供应商、资助和组织关系影响。
+A previous connection or general permission is not unlimited continuing authorization.
 
-## 紧急措施
+## 8. Public-write confirmation / 公开写入确认
 
-维护者可以暂时隐藏、关闭或限制以下内容：
+Before every public Discussion, Issue, comment, branch, commit, Pull Request or Review, the AI should show:
 
-- 明确泄露个人隐私、密钥或敏感数据；
-- 恶意软件、提示注入或供应链攻击载荷；
-- 垃圾信息、骚扰、仇恨或现实威胁；
-- 明显侵犯第三方权利的材料；
-- AI失控造成的批量重复或未经授权写入。
+- the exact public content or a clear diff;
+- the `D0` classification and checks performed;
+- the target GitHub object or directory;
+- material privacy, copyright, factual and safety risks;
+- the required human review;
+- the AI's role.
 
-紧急措施应在不扩大伤害的前提下记录原因，并允许后续申诉。
+The participant must explicitly confirm the proposed public write.
 
-## 纠错与申诉
+## 9. Multilingual authority / 多语言权威
 
-对AI翻译、自动分类、内容隐藏、重复判断、优先级、立项、审查或维护决定有异议时，参与者可以：
+Participant-authored original-language content remains authoritative for that participant's meaning. Translations and summaries are derivatives and must not silently increase certainty, remove objections or replace the source text.
 
-1. 指出具体记录；
-2. 提供原文或上下文；
-3. 说明受到的影响；
-4. 请求未参与原决定的人类复核；
-5. 提议修改协议或自动化规则。
+Machine-facing identifiers use English. English is an interoperability bridge, not a participation requirement.
 
-初创项目可以由两名未参与原决定的人类组成临时复核小组。隐私和安全泄露可以优先处理；一般观点争议不应通过删除历史解决。
+See [`LANGUAGE_POLICY.md`](LANGUAGE_POLICY.md).
 
-## 维护者
+## 10. Urgent action / 紧急措施
 
-初始阶段由仓库所有者承担维护职责。新增维护者应依据持续贡献、跨语言尊重、审查质量、治理判断、安全意识和社区信任，而非单纯提交数量或英语表达能力。
+The Maintainer may temporarily hide, close or restrict content that exposes credentials, personal data, malicious payloads, harassment, threats, clear rights violations or uncontrolled automated writes.
 
-随着项目发展，应公开维护者的权限、任期或复核机制，并避免由单一维护者长期垄断问题入口、路线排序、内容审查和最终批准。
+Urgent action should minimize further exposure, record a safe explanation and preserve an appeal path where possible.
+
+## 11. Independent template projects / 独立模板项目
+
+Teams that copy Iris Commons are independent. They may adopt, simplify or replace this governance, but should clearly publish:
+
+1. who maintains the repository;
+2. what requires human review;
+3. who may merge and release;
+4. how conflicts and appeals are handled;
+5. what AI may and may not do.
+
+The first Iris Commons pilot must be able to run using only this MVP governance.
