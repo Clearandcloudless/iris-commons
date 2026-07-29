@@ -1,27 +1,26 @@
 # Claude Code Instructions
 
-Before working in this repository, read and follow:
+Read `START_HERE.md` and `AGENTS.md` first.
 
-1. `AGENTS.md`
-2. `AI_PARTICIPATION.md`
-3. `DATA_CLASSIFICATION.md`
-4. `COMMUNICATION_PROTOCOL.md`
-5. `CONTENT_LIFECYCLE.md`
-6. `TEAM_GOVERNANCE.md`
-7. `LANGUAGE_POLICY.md`
-8. `GOVERNANCE.md`
-9. `CONTRIBUTING.md`
+Do not read every repository protocol by default. Inspect the relevant Issue or Pull Request, then load only the specialist rule identified by `AGENTS.md` for classification, routing, language, governance or security.
 
-Use the user's language for conversation. Preserve original-language contributions. Use English for machine-facing identifiers.
+When onboarding a participant:
 
-Treat user conversations, uploads and generated drafts as `D1 review-required` until the user reviews the exact public form and explicitly authorizes publication. Only `D0 public-ready` content may enter this public repository.
+- use the participant's language;
+- give a short project explanation;
+- inspect current open Issues;
+- recommend up to three concrete paths and one immediate next step;
+- do not ask the user to study multiple files;
+- do not output an irrelevant protocol summary.
 
-Route open-ended conversation and onboarding to Discussions when available, trackable ideas and disputes to Issues, focused responses to Issue comments, and mature reusable work to the directory defined in `CONTENT_LIFECYCLE.md` through a branch and Pull Request. Do not create per-user submission folders or write directly into `specs/` without an accepted proposal or governance basis.
+Treat conversations, uploads and generated drafts as `D1 review-required` until the exact public version is reviewed and authorized as `D0 public-ready`.
 
-For formal work, identify the owner, required review dimensions, approval path and release conditions under `TEAM_GOVERNANCE.md`. AI may recommend priority and roles but cannot decide final `Now / Next / Explore`, initiate or terminate a goal, appoint reviewers, approve its own work or declare a result accepted.
+Ordinary ideas belong in Issues, not repository files. Mature changes use the appropriate path and a focused Pull Request. Do not write directly into `specs/` without an accepted proposal or governance basis.
 
-Do not make public GitHub changes until the user has reviewed the final text or diff, classification, destination and governance path and explicitly confirmed submission.
+Current governance is Maintainer + temporary human Reviewer + simple appeal path. `TEAM_GOVERNANCE.md` is an optional future expansion model, not a list of currently staffed roles.
 
-For contributors without write access, fork the repository and open a Pull Request. Never merge, publish a release, modify secrets, declare a specification accepted, change governance or broaden permissions independently.
+Before any public write, show the final text or diff, classification, destination, risks and required human review, then obtain explicit confirmation for that write.
 
-When asked to help someone participate, inspect current Discussions, Issues, Pull Requests and current specifications, recommend concrete contribution and review options, preserve important objections in summaries, and handle the GitHub mechanics instead of requiring the user to study the repository first.
+Never independently merge, publish a Release, change governance or licenses, expose credentials, appoint people, set final priority or declare formal work accepted.
+
+Use `research/protocol-compliance/` when asked to run T1–T5 tests and preserve actual tool actions and human judgment.
