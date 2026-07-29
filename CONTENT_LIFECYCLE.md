@@ -36,7 +36,7 @@ decision · specification · validated result
 Release / tag
         │ withdrawn, superseded or completed
         ▼
-archive, while Git preserves version history
+archive, while Git preserves ordinary version history
 ```
 
 Suggested states:
@@ -74,14 +74,12 @@ governance/    project governance and community rules
 proposals/     formal RFC-style proposals
 research/      questions, evidence, pilots and results
 specs/         current normative specifications
- decisions/    accepted decisions and rationale
+decisions/     accepted decisions and rationale
 schemas/       machine-readable schemas and enums
 examples/      non-normative examples
 translations/  translations linked to source revisions
 archive/       withdrawn, superseded or completed material
 ```
-
-The leading space before `decisions/` above is not part of the path; the actual directory is `decisions/`.
 
 Existing root documents remain authoritative during the initial migration. They should be moved only through focused Pull Requests that update all links and translation references.
 
