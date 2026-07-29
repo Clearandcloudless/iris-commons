@@ -4,6 +4,8 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Русский](README.ru.md)
 
+> **Übersetzungsstatus:** Diese deutsche Fassung enthält noch nicht die aktuelle Einordnung von Iris Commons als wiederverwendbare Vorlage für unabhängige Projekte und noch nicht die neuen Dokumente [`COMMUNICATION_PROTOCOL.md`](COMMUNICATION_PROTOCOL.md) und [`TEAM_GOVERNANCE.md`](TEAM_GOVERNANCE.md). Bis zur Aktualisierung gilt die aktuelle [englische](README.md) oder [vereinfachte chinesische](README.zh-CN.md) Fassung als Referenz.
+
 ## Mache jeden KI-Assistenten zu einem Zugang zu einem gemeinsamen menschlichen Denkraum
 
 Jeden Tag entstehen weltweit wertvolle Gespräche zwischen Menschen und KI. Neue Theorien werden formuliert, institutionelle Schwächen entdeckt, gemeinnützige Vorhaben entworfen und lange übersehene Probleme in den Sprachen der Menschen erklärt, die sie tatsächlich betreffen.
