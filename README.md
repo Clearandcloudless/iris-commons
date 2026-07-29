@@ -1,157 +1,106 @@
 # Iris Commons
 
-> **Ideas without borders. 思想无界，自由相连。**
+> **Ideas without borders.**  
+> **思想无界，自由相连。**
 
-**Iris Commons（虹桥思想共同体）** 是一个开放、公益的人类—AI协作研究项目。
+## 让每个人的 AI，成为通往人类共同思想网络的入口
 
-“Iris”取自希腊神话中的彩虹信使：彩虹连接彼此分隔的世界，也保留每一种颜色。这个项目希望让思想跨越语言、地域、学科、身份和模型平台的边界，在保留原意与差异的前提下自由流动、共同演化。
+今天，世界上正在发生数以亿计的人机对话：有人提出新理论，有人发现制度漏洞，有人设计公益方案，有人用自己的语言解释一个从未被认真理解的问题。
 
-本仓库不是一个已经定型的软件产品，而是用于共同讨论、设计、论证和试验的公共空间。
+但绝大多数思想最终被困在私人聊天窗口、语言边界、平台账户和短暂上下文中。
 
-## 我们想解决什么问题
+**Iris Commons 想改变这件事。**
 
-今天，人们可以分别与 GPT、Gemini、本地模型和其他智能体深入交流，但这些交流通常：
+我们正在探索一种开放、公益的人类—AI协作网络：任何人都可以使用自己最自然的语言，与自己熟悉的 GPT、Gemini、Claude、本地模型或未来的智能体交流；AI负责理解项目、翻译语境、整理观点、检索证据、寻找反例并连接其他参与者；GitHub则记录思想如何被提出、争论、修订、验证和共同接受。
 
-- 被封闭在不同平台和账号中；
-- 难以迁移、引用、复核和长期积累；
-- 受到语言、专业背景和表达方式的限制；
-- 很难转化为多人共同维护的公共知识；
-- 缺少对人类贡献、AI参与、翻译过程和证据来源的清晰记录。
+你不必先学会Git、Issue、Pull Request或复杂的开放科学流程。
 
-Iris Commons 探索一种新的协作模式：
-
-1. 每个人使用自己的语言与自己的 AI 秘书交流；
-2. AI 帮助整理、翻译、检索、质疑和结构化表达；
-3. 人类选择哪些内容进入公共协作空间；
-4. 参与者通过 Issue、Pull Request 和版本记录共同修改知识；
-5. 重要观点始终保留原文、来源、参与者和审核状态；
-6. 不同模型可以参与，但不能绕过人类授权和治理。
-
-## 当前阶段：GitHub-only MVP
-
-第一阶段只使用 GitHub，验证最小可行协作闭环：
+你只需要会和AI说话。
 
 ```text
-个人思考 / 人机对话
-        ↓ 人工选择
-      提交 Issue
-        ↓
-翻译、讨论、质疑、补证
-        ↓
-形成提案 / 文档 / 实验记录
-        ↓ Pull Request
-      同行审查
-        ↓ 人类批准
-   进入公共知识库
+你的母语与真实想法
+          ↓
+     你的 AI 秘书
+          ↓
+翻译 · 整理 · 检索 · 质疑 · 协调
+          ↓
+   世界各地的人与 AI
+          ↓
+可追溯、可复核、可继续演化的公共知识
 ```
 
-GitHub 在这一阶段承担：
+## 如果思想不再需要护照
 
-- 公共讨论入口；
-- 可版本化的知识文档；
-- 提案、审查和决策记录；
-- 贡献归属和变更历史；
-- 未来协议与原型代码的协作空间。
+在 Iris Commons 所设想的未来：
 
-GitHub **不被视为**最终的数据湖、隐私档案库、科研计算平台或永久保存机构。
+- 一位只使用中文的工程师，可以直接参与西班牙语公共安全研究；
+- 一位不熟悉GitHub的教师，可以让AI替自己找到相关讨论并提交观点；
+- 一位普通公众可以要求AI解释专业争议，而不是被迫接受一份不透明的摘要；
+- 不同模型可以分别承担翻译、研究、批判和复核，但不能冒充证据或绕过人类授权；
+- 每个观点都能保留原文、上下文、来源、异议和演化历史；
+- 少数意见不会因为语言弱势、表达不够专业或不符合主流结论而自动消失。
 
-## 项目原则
+这不仅是一个知识库，也不仅是一个多语言论坛。
 
-### 1. 原文优先
+它可能成为一种新的公共基础设施：
 
-翻译、摘要和改写都是派生内容，不能覆盖原始表达。参与者应能追溯“谁在何时、以什么语言、表达了什么”。
+> **让人类第一次能够借助各自的AI，在不放弃语言、文化和思想差异的前提下，共同思考同一个问题。**
 
-### 2. 人类最终负责
+## 为什么叫 Iris
 
-AI 可以起草、翻译、整理、检索和审查，但不能独立：
+Iris 是希腊神话中的彩虹信使。
 
-- 公开私人或敏感信息；
-- 批准关键研究结论；
-- 代表他人作出授权；
-- 绕过审查修改受保护内容。
+彩虹连接彼此分隔的世界，却没有把所有颜色混成一种颜色。
 
-### 3. 差异不是噪声
+这正是 Iris Commons 的核心隐喻：
 
-Iris Commons 不追求把所有观点压缩成单一结论。合理分歧、少数意见、条件差异和不确定性都应被保留。
+- 连接，而不是同化；
+- 翻译，而不是覆盖；
+- 协作，而不是服从；
+- 形成公共知识，同时保留思想来自哪里、经历了什么争论。
 
-### 4. 可追溯与可复核
+## 我们正在建设什么
 
-重要主张应尽量关联：
+Iris Commons 将逐步形成：
 
-- 原始来源；
-- 人类贡献者；
-- AI模型与参与方式；
-- 翻译或转换过程；
-- 数据、代码和环境版本；
-- 当前可信状态。
+- 面向普通人的AI参与入口；
+- 跨语言原文、译文和术语关联机制；
+- 人类与AI共同使用的研究记录格式；
+- 可审计的AI秘书权限与披露协议；
+- 通过Issue和Pull Request演化的公共知识体系；
+- 可迁移到不同模型、Git平台、开放科学平台和本地基础设施的开放标准；
+- 由真实公益课题验证的人机协作方法。
 
-### 5. 开放但有边界
+## 现在就可以参与
 
-公益和开放不等于公开一切。隐私、版权、科研伦理、安全风险和第三方权利优先于自动公开。
+项目目前处于**公开论证和GitHub原型阶段**。所有核心设想都允许被质疑、推翻和重建。
 
-### 6. 多模型与平台中立
+不需要先阅读整个仓库。把下面这句话交给你正在使用的AI即可：
 
-项目不绑定某个模型厂商、云平台或专有协议。优先采用 Markdown、YAML、JSON、Git 和开放接口等可迁移格式。
+> 阅读 `https://github.com/Clearandcloudless/iris-commons` 中的 `AI_PARTICIPATION.md` 和AI指令文件，使用我的语言向我介绍当前最适合参与的议题，并在执行任何公开写入前征得我的确认。
 
-## 参与方式
+**[让你的AI带你开始参与 →](AI_PARTICIPATION.md)**
 
-当前最需要的不是大量编码，而是共同论证：
+也可以直接进入[公开议题](https://github.com/Clearandcloudless/iris-commons/issues)，提出想法、批评、风险、研究资料或首个公益试验课题。
 
-- 这个构想是否真正解决了协作障碍？
-- GitHub 是否适合承担第一阶段公共空间？
-- 多语言内容应该如何组织？
-- AI秘书应拥有多大权限？
-- 如何处理错误、偏见、提示注入和恶意参与？
-- 如何记录贡献和建立可信度？
-- 哪个真实公益课题适合作为首个试验？
+## 一条不可妥协的边界
 
-请阅读：
+Iris Commons追求思想无界，但不追求数据无界。
 
-- [愿景与边界](VISION.md)
-- [治理规则](GOVERNANCE.md)
-- [参与指南](CONTRIBUTING.md)
-- [路线图](ROADMAP.md)
-- [初始架构](ARCHITECTURE.md)
-- [AI秘书协议草案](docs/ai-secretary-protocol.md)
-- [研究记录模型](docs/research-record-model.md)
-- [威胁模型](docs/threat-model.md)
+隐私、版权、科研伦理、现实安全和人的最终决定权，始终高于自动公开和AI效率。
 
-## 仓库结构
-
-```text
-.
-├── README.md
-├── VISION.md
-├── ARCHITECTURE.md
-├── GOVERNANCE.md
-├── CONTRIBUTING.md
-├── ROADMAP.md
-├── CODE_OF_CONDUCT.md
-├── LICENSE
-├── LICENSE-DOCS.md
-├── docs/
-│   ├── ai-secretary-protocol.md
-│   ├── research-record-model.md
-│   └── threat-model.md
-└── .github/
-    ├── ISSUE_TEMPLATE/
-    └── pull_request_template.md
-```
-
-## 项目状态
-
-**概念验证 / 公开论证阶段。**
-
-当前所有核心设计均为草案，可以通过 Issue 和 Pull Request 修改。
-
-## License
-
-- 软件代码：MIT License
-- 原创文档与研究材料：CC BY 4.0
-- 数据集、模型、第三方材料：以各自明确标注的许可证为准
+AI可以成为桥梁、秘书、翻译者和批判者，但不能成为未经授权的代言人，也不能成为决定真理的最终裁判。
 
 ---
 
-## English summary
+## English
 
-Iris Commons is an open, nonprofit-oriented research initiative exploring borderless collaboration between people and AI assistants. It aims to preserve original voices while enabling translation, structured debate, evidence review, versioned knowledge, and accountable human governance across languages, disciplines, regions, and model platforms.
+**Iris Commons** is an open, nonprofit-oriented experiment in borderless human–AI collaboration.
+
+It imagines a world where people can use their own languages and preferred AI assistants to participate in shared research, public reasoning and knowledge creation—without first mastering GitHub, professional jargon or a global lingua franca.
+
+AI assistants may translate, structure, research and critique. Humans retain authorship, authorization and final responsibility. Original voices remain authoritative; translations and summaries remain traceable derivatives.
+
+**Give the repository URL to your AI and ask it to read [`AI_PARTICIPATION.md`](AI_PARTICIPATION.md).**
+
+> Different languages. Different models. Different perspectives. One evolving commons.
