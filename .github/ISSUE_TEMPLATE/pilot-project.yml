@@ -1,5 +1,5 @@
 name: Public-interest pilot project / 公益试验项目提案
-description: Propose a real project to test the Iris Commons workflow / 提议真实课题以验证Iris Commons协作流程
+description: Propose a small real project that tests the Iris Commons workflow / 提议小型真实课题以验证Iris Commons协作流程
 title: "[Pilot] "
 labels:
   - pilot
@@ -8,11 +8,11 @@ body:
   - type: markdown
     attributes:
       value: |
-        Propose a specific, limited and verifiable public-interest project. You may use any language and ask an AI assistant to complete the GitHub form.
-        请提出具体、有限、可验证的公益项目。可以使用任何语言，也可以让AI代为完成GitHub表单。
+        The first pilot should expose collaboration problems, not maximize topic size. Prefer a one-to-two-week, publicly verifiable project using public sources and at least two language, regional or professional perspectives.
+        首个试验应优先暴露协作机制问题，而不是追求课题规模。建议使用公开资料、可在1—2周完成首轮，并需要至少两种语言、地区或专业视角。
 
-        The AI must preserve your original meaning, identify risks and obtain your confirmation before submission.
-        AI必须保留原意、识别风险，并在提交前取得你的确认。
+        Read `research/pilots/SELECTION_AND_METRICS.md` for the current selection and evaluation rules. An AI assistant may complete this form, but it must preserve your meaning and obtain confirmation before submission.
+        当前选择和评估规则见`research/pilots/SELECTION_AND_METRICS.md`。AI可以代为填写，但必须保留原意并在提交前取得确认。
 
   - type: input
     id: source_language
@@ -51,10 +51,35 @@ body:
       required: true
 
   - type: textarea
+    id: workflow_validation
+    attributes:
+      label: Workflow validation value / 协作流程验证价值
+      description: Which onboarding, multilingual, classification, routing, evidence or review problems will this pilot test? / 本课题将验证哪些新人入口、多语言、分类、路由、证据或审查问题？
+    validations:
+      required: true
+
+  - type: textarea
+    id: disagreement
+    attributes:
+      label: Expected disagreement or uncertainty / 预期分歧或不确定性
+      description: What genuine disagreement, competing interpretation or failure condition may appear? / 可能出现哪些真实分歧、竞争性解释或失败条件？
+    validations:
+      required: true
+
+  - type: input
+    id: timebox
+    attributes:
+      label: First-iteration timebox / 首轮时间盒
+      description: Prefer roughly one to two weeks. / 建议首轮约1—2周。
+      placeholder: 7 days / 14 days / other
+    validations:
+      required: true
+
+  - type: textarea
     id: deliverable
     attributes:
       label: Verifiable deliverables / 可验证交付成果
-      description: Open report, dataset documentation, prototype, reproduction, public guide or other reviewable result. / 例如开放报告、数据说明、原型、复现实验或公共指南。
+      description: Open report, source register, prototype, reproduction, comparison or public guide. / 例如开放报告、来源清单、原型、复现、比较报告或公共指南。
     validations:
       required: true
 
@@ -69,12 +94,38 @@ body:
     id: data_and_license
     attributes:
       label: Data, sources and licenses / 数据、资料和许可证
-      description: Where will materials come from? Do they include personal, restricted or high-risk information? / 数据从哪里来？是否包含个人、受限或高风险信息？
+      description: Use public material where possible. Identify personal, restricted or high-risk information. / 优先使用公开资料，并说明是否包含个人、受限或高风险信息。
+    validations:
+      required: true
+
+  - type: textarea
+    id: independent_verification
+    attributes:
+      label: Independent verification / 独立复核方法
+      description: How can another participant review the same evidence without private founder-controlled resources? / 第三方如何基于同一证据复核，且不依赖发起者掌握的内部资源？
+    validations:
+      required: true
 
   - type: textarea
     id: method_and_validation
     attributes:
       label: Initial method and validation criteria / 初步方法与验证标准
+    validations:
+      required: true
+
+  - type: textarea
+    id: process_metrics
+    attributes:
+      label: Process metrics / 过程指标
+      description: Include onboarding time, AI corrections, classification/routing, translation drift, evidence conflict and protocols actually used. / 建议包含首次贡献时间、AI纠正次数、分类路由、翻译失真、证据冲突及实际使用的协议。
+    validations:
+      required: true
+
+  - type: textarea
+    id: minimum_team
+    attributes:
+      label: Minimum execution team / 最小执行团队
+      description: Can one human and two AI client configurations complete a minimum loop? Who else is needed? / 1名人类和2类AI客户端能否完成最小闭环？还需要谁？
 
   - type: textarea
     id: risks
@@ -84,9 +135,12 @@ body:
       required: true
 
   - type: textarea
-    id: required_skills
+    id: stop_conditions
     attributes:
-      label: Participants and capabilities needed / 需要的参与者和能力
+      label: Stop or narrowing conditions / 停止或缩小范围条件
+      description: What evidence or risk should cause the pilot to pause, narrow or end? / 出现什么证据或风险时应暂停、缩小范围或结束？
+    validations:
+      required: true
 
   - type: dropdown
     id: ai_assistance_status
