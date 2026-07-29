@@ -6,7 +6,7 @@
 
 普通参与者的主要界面应当是其熟悉的AI，而不是GitHub网页。
 
-GitHub在第一阶段承担公共记录、权限控制、版本演化和审查；AI承担理解项目、解释语境、降低工具门槛和执行受控操作。
+GitHub在第一阶段承担公共记录、权限控制、版本演化和审查；AI承担理解项目、解释语境、降低工具门槛、数据分级和受控操作。
 
 ```text
 人类参与者
@@ -15,17 +15,52 @@ GitHub在第一阶段承担公共记录、权限控制、版本演化和审查�
 AI participation layer
   ├─ 项目规则自动发现
   ├─ 用户语言交互
-  ├─ 仓库与Issue检索
+  ├─ 仓库、Issue与规范检索
   ├─ 翻译、整理和批判
-  ├─ 风险检查
+  ├─ 数据分类 D0–D3
+  ├─ 生命周期与目录路由
+  ├─ 隐私、版权和安全检查
   └─ 公开前确认
   ▼
 GitHub connector / MCP / Git / API
   ▼
 Issues · Comments · Branches · Pull Requests · Reviews
   ▼
-可追溯公共知识
+讨论 → 提案 / 研究 → 决策 / 规范 → Release / Archive
 ```
+
+## 两个独立维度
+
+Iris Commons将“数据分类”与“内容生命周期”分开。
+
+### 数据分类
+
+决定内容能否进入公共仓库：
+
+```text
+D0 public-ready       → can enter public GitHub
+D1 review-required    → private draft only
+D2 restricted         → separate controlled storage
+D3 prohibited         → do not store or publish
+```
+
+完整规则见 `DATA_CLASSIFICATION.md`。
+
+### 内容生命周期
+
+决定可公开内容处于什么阶段、应进入什么GitHub对象或目录：
+
+```text
+private draft
+  → public Issue / Comment
+  → proposal / research
+  → reviewed decision / specification / result
+  → Release or archive when appropriate
+```
+
+完整规则见 `CONTENT_LIFECYCLE.md`。
+
+文件夹不是权限边界。公共仓库中的Draft PR、分支和名为`private/`的目录仍然是公开空间。
 
 ## 参与角色
 
@@ -33,31 +68,33 @@ Issues · Comments · Branches · Pull Requests · Reviews
 
 - **发起者**：提出问题并授权公开自己的内容；
 - **贡献者**：补充观点、证据、翻译、实验或文档；
-- **审查者**：检查证据、推理、翻译和风险；
+- **审查者**：检查证据、推理、翻译、分类和风险；
 - **维护者**：管理规则、权限、标签、合并和发布。
 
 ### AI角色
 
 - **onboarding assistant**：理解项目并带领新用户完成首次参与；
 - **personal secretary**：把用户授权的内容整理为Issue、评论或提案；
+- **classification assistant**：识别D0–D3并阻止不适当公开；
+- **routing assistant**：查重并选择Issue、评论、Proposal、Research或Specification；
 - **translation assistant**：生成派生译文、术语说明和桥接摘要；
 - **research assistant**：检索资料、提出假设和实验方案；
 - **critique assistant**：寻找反例、漏洞、遗漏和替代解释；
 - **formatting assistant**：检查元数据、链接、模板和一致性；
 - **coordination assistant**：关联Issue、PR、记录和审查需求。
 
-不同模型可以承担不同角色，但必须遵守同一权限、语言和披露规则。
+不同模型可以承担不同角色，但必须遵守同一权限、语言、分类、路由和披露规则。
 
 ## AI规则自动发现
 
-仓库提供以下入口，使主流AI工具无需用户逐份解释项目：
-
 | 文件 | 主要用途 |
 |---|---|
-| `AGENTS.md` | 通用AI代理行为、权限和工作流 |
-| `AI_PARTICIPATION.md` | 面向用户和AI的完整参与、配置与提示词指南 |
-| `CLAUDE.md` | Claude Code自动项目说明 |
-| `GEMINI.md` | Gemini CLI项目说明 |
+| `AGENTS.md` | 通用AI代理行为、分类、路由、权限和工作流 |
+| `AI_PARTICIPATION.md` | 面向用户和AI的参与、配置与提示词指南 |
+| `DATA_CLASSIFICATION.md` | D0–D3公开边界 |
+| `CONTENT_LIFECYCLE.md` | 内容成熟度与仓库路由 |
+| `CLAUDE.md` | Claude Code项目入口 |
+| `GEMINI.md` | Gemini CLI项目入口 |
 | `.github/copilot-instructions.md` | GitHub Copilot仓库级指令 |
 | `LANGUAGE_POLICY.md` | 人类语言与机器互操作规则 |
 
@@ -71,19 +108,13 @@ Codex及支持`AGENTS.md`的代理应优先读取该文件。其他客户端应�
 
 AI通过网页、搜索或只读GitHub连接读取公共仓库，生成可复制草稿。用户在网页中提交。
 
-适合：零配置、首次参与、低信任场景。
-
 ### 2. Connected assistant mode
 
-AI通过GitHub应用、OAuth或MCP读取和写入Issues、Comments或Pull Requests，并在每次公开写入前取得确认。
-
-适合：长期参与、非程序员用户。
+AI通过GitHub应用、OAuth或MCP读取和写入Issues、Comments或Pull Requests，并在每次公开写入前完成分类和用户确认。
 
 ### 3. Repository agent mode
 
 Codex、Claude Code、Gemini CLI或其他代理在用户Fork或本地克隆中修改文件、运行检查并创建PR。
-
-适合：协议、文档、Schema和代码贡献。
 
 ### 4. Future service mode
 
@@ -106,38 +137,46 @@ Codex、Claude Code、Gemini CLI或其他代理在用户Fork或本地克隆中�
 ## 最小数据流
 
 ```text
-私人对话或个人笔记
+私人对话、上传材料或个人笔记
         │
-        │ 参与者要求AI帮助参与
         ▼
-AI读取仓库规则和相关Issue
+AI默认分类为 D1 review-required
         │
-        ├─ 使用参与者语言解释项目
+        ├─ 检查隐私、版权、事实、伦理和安全
+        ├─ 搜索重复Issue与现行规范
         ├─ 保留原始表达
         ├─ 生成译文或桥接摘要
-        ├─ 区分事实、推断和建议
-        ├─ 检查隐私、版权和安全
-        └─ 展示最终公开草稿
+        ├─ 选择最小合适的GitHub对象
+        └─ 展示最终公开草稿和目标位置
         ▼
-参与者明确确认
+参与者明确授权，内容转为D0
         ▼
-GitHub Issue / Comment / Pull Request
+Issue / Comment / Branch + Pull Request
         │
         ├─ 多语言讨论
         ├─ 证据补充
         ├─ 反例和风险审查
         └─ 修订
         ▼
+长期内容路由
+        ├─ proposals/
+        ├─ research/
+        ├─ decisions/
+        ├─ specs/
+        ├─ schemas/
+        ├─ examples/
+        └─ translations/
+        ▼
 人类维护者或指定审查者批准
         ▼
-公共知识文档 / 实验记录 / 决策记录
+当前公共知识 / Release / archive/
 ```
 
 “AI能够访问内容”不等于“参与者授权公开内容”。
 
 ## 内容与语言分层
 
-所有正式记录应在需要时区分：
+正式记录在需要时区分：
 
 1. **original**：参与者原始语言表达；
 2. **translation**：可追溯的派生译文；
@@ -148,75 +187,77 @@ GitHub Issue / Comment / Pull Request
 
 语言规则见 `LANGUAGE_POLICY.md`。
 
-## 内容区域
+## 逻辑内容区域
 
-即使当前仅使用GitHub，也应在逻辑上区分：
+1. **private space**：D1、D2或D3内容，不进入公共仓库；
+2. **public discussion space**：已授权D0内容形成Issue、Comment或PR；
+3. **structured work space**：Proposal、Research、Schema、Example和Translation；
+4. **accepted knowledge space**：Governance、Decision、Specification和经审查结果；
+5. **stable release space**：Release标记的阶段性版本；
+6. **archive space**：退出当前工作流但仍有独立阅读价值的D0内容。
 
-1. **private space**：不进入仓库，由参与者控制；
-2. **draft space**：AI草稿、本地文件、Fork分支或Draft PR；
-3. **public discussion space**：已授权的Issue、Comment和PR；
-4. **accepted knowledge space**：主分支中经审查的内容；
-5. **stable release space**：Release标记的阶段性版本。
-
-## 建议目录
+## 物理目录
 
 ```text
-proposals/       正式提案
-research/        研究问题、方法和结果
-decisions/       已接受的重要决策
-translations/    关联源版本的翻译
-schemas/         YAML/JSON数据结构
-experiments/     可复现实验说明
+docs/          explanatory guides and concepts
+governance/    accepted governance and community rules
+proposals/     formal RFC-style proposals
+research/      questions, evidence, pilots and results
+specs/         current normative specifications
+decisions/     accepted decisions and rationale
+schemas/       machine-readable schemas and enums
+examples/      non-normative examples
+translations/  translations linked to source revisions
+archive/       withdrawn, superseded or completed material
 ```
 
-原始聊天流水、大型数据、音视频和模型权重不应直接提交到Git。
+不建立按用户划分的`users/<name>/`目录，也不建立无明确生命周期的通用`submissions/`目录。Issue已经承担公开投稿、作者归属、时间线和讨论功能。
+
+现有根目录文件在迁移期间继续有效。移动文件必须通过聚焦的PR更新所有链接和翻译引用。
+
+## 归档原则
+
+Git历史、Tag和Release保存普通旧版本。只有已经退出活跃工作流、但仍值得作为独立材料阅读的内容才进入`archive/`。
+
+AI查询项目当前规则时应依次检查：
+
+1. current `specs/` and `decisions/`;
+2. current governance files;
+3. active proposals and research;
+4. Issues and Pull Requests;
+5. `archive/`;
+6. Git history and Releases.
 
 ## 权限模型
 
 ### L0：只读
 
-- 读取公共仓库；
-- 解释、总结和推荐议题；
-- 不执行GitHub写入。
+读取、解释、分类建议和路由建议，不执行GitHub写入。
 
 ### L1：私有草稿
 
-- 整理用户观点；
-- 生成Issue、Comment或PR草稿；
-- 检查风险；
-- 不公开提交。
+整理用户观点、生成草稿和风险检查，不公开提交。
 
 ### L2：确认后写入
 
-- 创建Issue或Comment；
-- 在用户Fork创建分支；
-- 创建Draft Pull Request；
-- 每次公开写入前取得确认。
+用户确认后创建Issue、Comment、Fork分支或Draft Pull Request。
 
 ### L3：维护辅助
 
-- 添加标签；
-- 关联记录；
-- 运行格式、链接和Schema检查；
-- 更新非关键元数据；
-- 仍受最小权限和审计约束。
+添加标签、关联记录、运行格式和Schema检查、更新非关键元数据。
 
 ### L4：受保护操作
 
-- 合并主分支；
-- 发布Release；
-- 修改许可证、治理、权限和安全工作流；
-- 删除或隐藏公共历史。
+合并主分支、发布Release、修改许可证、治理、权限、安全工作流或删除公共历史。
 
 L4默认只能由人类执行，或在可逆、范围清晰的情况下逐次明确授权。不得授予AI长期自主L4权限。
 
 ## 连接器与凭证
 
 - OAuth优先于长期令牌；
-- 使用PAT时应选择fine-grained token；
+- 使用PAT时选择fine-grained token；
 - 只授权必要仓库和必要工具集；
 - 令牌不得写入仓库、Issue、提示词或日志；
-- 公共讨论通常只需要仓库读取和Issues读写；
 - PR流程优先写入参与者自己的Fork；
 - 默认不允许Secrets、Actions管理、组织管理或仓库删除权限。
 
