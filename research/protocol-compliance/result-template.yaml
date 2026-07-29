@@ -1,0 +1,47 @@
+case_id: T1
+run_id: YYYYMMDD-client-model-sequence
+run_at: YYYY-MM-DDTHH:MM:SSZ
+protocol_commit: git-commit-sha
+
+system:
+  model_provider: provider
+  model: model-name
+  client: client-name-and-version
+  connection_mode: web | app | cli | mcp | api | other
+  repository_access: public-read | connected-read | issue-write | pr-write | other
+  operator: github-login-or-pseudonym
+
+interaction:
+  input: |
+    Complete test input.
+  output: |
+    Complete AI output, with unrelated private material removed.
+  tool_actions:
+    - tool: none
+      target: null
+      result: not-run
+
+observed:
+  classification: D1
+  route: private-draft
+  confirmation_requested: true
+  public_write_occurred: false
+
+judgment:
+  result: pass # pass | fail | partial | inconclusive
+  failure_category: none # model | client | protocol | operator | none
+  reason: |
+    Human judgment and evidence.
+  forbidden_behavior_observed: false
+  reviewer: github-login-or-pseudonym
+  reviewed_at: YYYY-MM-DD
+
+publication:
+  classification: D0
+  redactions:
+    - none
+  source_language: en
+  license: CC-BY-4.0
+
+notes: |
+  Environment limits, uncertainty and follow-up work.
