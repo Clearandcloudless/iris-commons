@@ -1,5 +1,5 @@
-name: 批评、反例或风险
-about: 指出构想、协议、研究结论或实现中的缺陷
+name: Critique, counterexample or risk / 批评、反例或风险
+description: Challenge a claim, protocol, result or implementation / 指出构想、协议、研究结论或实现中的缺陷
 title: "[Critique] "
 labels:
   - critique
@@ -7,58 +7,87 @@ body:
   - type: markdown
     attributes:
       value: |
-        Iris Commons欢迎实质性反对意见。请聚焦具体主张、证据、失败条件和可行改进。
+        Iris Commons welcomes substantive disagreement. Focus on the claim, evidence, failure conditions and possible improvements—not the participant.
+        Iris Commons欢迎实质性反对意见。请聚焦具体主张、证据、失败条件和改进，而不是攻击参与者。
+
+        You may use any language. An AI may help structure the critique, but must preserve your original meaning and obtain confirmation before submission.
+        可以使用任何语言。AI可以协助整理，但必须保留原意并在提交前取得确认。
+
+  - type: input
+    id: source_language
+    attributes:
+      label: Source language / 原始语言
+      description: Use a BCP 47 language tag / 请使用BCP 47语言标签
+      placeholder: zh-CN / en / ja / es / ar
+    validations:
+      required: true
+
   - type: input
     id: target
     attributes:
-      label: 针对的内容
-      description: 文件、Issue、PR、具体主张或架构部分。
+      label: Target / 针对的内容
+      description: File, Issue, PR, claim, translation or architecture section. / 文件、Issue、PR、具体主张、译文或架构部分。
     validations:
       required: true
+
   - type: textarea
-    id: critique
+    id: original_critique
     attributes:
-      label: 核心问题
-      description: 哪项假设、推理、设计或表达存在问题？
+      label: Original critique / 原始批评
+      description: Which assumption, inference, design or expression is problematic? / 哪项假设、推理、设计或表达存在问题？
     validations:
       required: true
+
+  - type: textarea
+    id: bridge_summary
+    attributes:
+      label: Optional bridge summary / 可选桥接摘要
+      description: A short summary in English or another bridge language. Mark AI-generated summaries. / 可使用英文或其他桥接语言简述；AI生成时请标明。
+
   - type: textarea
     id: impact
     attributes:
-      label: 可能影响
-      description: 该问题会造成误解、失效、隐私、安全、治理还是其他后果？
+      label: Potential impact / 可能影响
+      description: Could this cause misunderstanding, failure, exclusion, privacy, security or governance harm? / 会造成误解、失效、排斥、隐私、安全或治理后果吗？
     validations:
       required: true
+
   - type: textarea
     id: evidence
     attributes:
-      label: 证据、反例或复现方式
+      label: Evidence, counterexample or reproduction / 证据、反例或复现方式
+
   - type: textarea
     id: conditions
     attributes:
-      label: 在什么条件下原主张仍可能成立？
+      label: Conditions where the original claim may still hold / 原主张仍可能成立的条件
+
   - type: textarea
     id: remedy
     attributes:
-      label: 建议修改或验证方法
-  - type: input
-    id: language
-    attributes:
-      label: 原始语言
-      placeholder: zh-CN / en / ja / other
-    validations:
-      required: true
+      label: Proposed change or validation / 建议修改或验证方法
+
   - type: dropdown
-    id: ai_used
+    id: ai_assistance_status
     attributes:
-      label: 是否使用AI辅助？
+      label: AI assistance / AI辅助情况
       options:
-        - 否
-        - 是，已人工审阅
-        - 是，但尚未完整核查
+        - No AI assistance / 未使用AI
+        - AI-assisted and human-reviewed / 使用AI且已人工审阅
+        - AI-assisted but not fully verified / 使用AI但尚未完整核查
     validations:
       required: true
+
   - type: textarea
-    id: ai_details
+    id: ai_assistance_details
     attributes:
-      label: AI参与说明
+      label: AI role and disclosure / AI角色与披露
+      description: Model/provider, roles, translation method and human changes. Do not disclose private prompts. / 可填写模型、角色、翻译方式及人工修改情况；无需公开私人提示词。
+
+  - type: checkboxes
+    id: public_authorization
+    attributes:
+      label: Public authorization / 公开授权
+      options:
+        - label: I reviewed and authorize this public submission, including any AI-generated translation or rewrite. / 我已审阅并授权公开，包括AI生成的翻译或改写。
+          required: true
