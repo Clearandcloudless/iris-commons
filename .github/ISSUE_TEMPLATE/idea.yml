@@ -1,0 +1,61 @@
+name: 想法或研究问题
+about: 提出一个需要共同讨论、研究或验证的问题
+title: "[Idea] "
+labels:
+  - discussion
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢提出问题。可以使用你最自然的语言；请尽量保留原始表达，并区分事实与推断。
+  - type: textarea
+    id: question
+    attributes:
+      label: 原始问题或想法
+      description: 你真正想讨论或验证的内容是什么？
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: 原始语言
+      placeholder: zh-CN / en / ja / other
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 背景与动机
+      description: 为什么这个问题重要？它来自什么观察、项目或对话？
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 已有资料或证据
+      description: 请提供可核查来源；尚无资料也可以说明。
+  - type: textarea
+    id: uncertainty
+    attributes:
+      label: 不确定性与反例
+      description: 哪些地方可能错误？什么证据会改变你的判断？
+  - type: dropdown
+    id: ai_used
+    attributes:
+      label: 是否使用AI辅助形成本Issue？
+      options:
+        - 否
+        - 是，已人工审阅
+        - 是，但尚未完整核查
+    validations:
+      required: true
+  - type: textarea
+    id: ai_details
+    attributes:
+      label: AI参与说明
+      description: 可填写模型、角色以及人工修改情况；无需公开私人提示词。
+  - type: checkboxes
+    id: authorization
+    attributes:
+      label: 公开确认
+      options:
+        - label: 我确认有权公开以上内容，且已移除隐私、密钥和未经授权材料。
+          required: true
