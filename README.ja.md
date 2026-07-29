@@ -4,6 +4,8 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Русский](README.ru.md)
 
+> **翻訳状況:** この日本語版には、Iris Commonsを独立プロジェクト向けの再利用可能なテンプレートとして位置づける最新の変更、および新しい [`COMMUNICATION_PROTOCOL.md`](COMMUNICATION_PROTOCOL.md) と [`TEAM_GOVERNANCE.md`](TEAM_GOVERNANCE.md) がまだ反映されていません。更新されるまでは、現在の[英語版](README.md)または[簡体中文版](README.zh-CN.md)を参照してください。
+
 ## 一人ひとりのAIを、人類共有の思考ネットワークへの入口に
 
 毎日、世界中で価値ある人間とAIの対話が生まれています。新しい理論が提案され、制度の欠陥が見つかり、公共のための計画が設計され、これまで十分に理解されなかった問題がそれぞれの言語で説明されています。

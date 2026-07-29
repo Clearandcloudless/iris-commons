@@ -4,6 +4,8 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Русский](README.ru.md)
 
+> **État de la traduction :** cette version française ne reflète pas encore le nouveau positionnement d’Iris Commons comme modèle réutilisable pour des projets indépendants, ni les nouveaux documents [`COMMUNICATION_PROTOCOL.md`](COMMUNICATION_PROTOCOL.md) et [`TEAM_GOVERNANCE.md`](TEAM_GOVERNANCE.md). En attendant sa mise à jour, veuillez consulter la version [anglaise](README.md) ou [chinoise simplifiée](README.zh-CN.md) actuelle.
+
 ## Faire de chaque assistant IA une porte d’entrée vers une intelligence humaine partagée
 
 Chaque jour, des conversations remarquables ont lieu entre des personnes et des IA. De nouvelles théories apparaissent, des failles institutionnelles sont révélées, des projets d’intérêt général sont conçus et des problèmes longtemps ignorés sont enfin expliqués dans les langues de celles et ceux qui les vivent.

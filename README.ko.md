@@ -4,6 +4,8 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Русский](README.ru.md)
 
+> **번역 상태:** 이 한국어판에는 Iris Commons를 독립 프로젝트를 위한 재사용 가능한 템플릿으로 정의한 최신 변경과 새로운 [`COMMUNICATION_PROTOCOL.md`](COMMUNICATION_PROTOCOL.md), [`TEAM_GOVERNANCE.md`](TEAM_GOVERNANCE.md)가 아직 반영되지 않았습니다. 업데이트 전까지 현재 [영문판](README.md) 또는 [중문 간체판](README.zh-CN.md)을 참고해 주세요.
+
 ## 모든 사람의 AI를 인류 공동 사고 네트워크로 들어가는 입구로
 
 매일 전 세계에서 가치 있는 인간과 AI의 대화가 이루어집니다. 새로운 이론이 제안되고, 제도의 허점이 발견되며, 공익 프로젝트가 설계되고, 그동안 충분히 이해되지 못한 문제가 각자의 언어로 설명됩니다.
