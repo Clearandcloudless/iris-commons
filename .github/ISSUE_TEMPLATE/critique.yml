@@ -1,0 +1,64 @@
+name: 批评、反例或风险
+about: 指出构想、协议、研究结论或实现中的缺陷
+title: "[Critique] "
+labels:
+  - critique
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Iris Commons欢迎实质性反对意见。请聚焦具体主张、证据、失败条件和可行改进。
+  - type: input
+    id: target
+    attributes:
+      label: 针对的内容
+      description: 文件、Issue、PR、具体主张或架构部分。
+    validations:
+      required: true
+  - type: textarea
+    id: critique
+    attributes:
+      label: 核心问题
+      description: 哪项假设、推理、设计或表达存在问题？
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: 可能影响
+      description: 该问题会造成误解、失效、隐私、安全、治理还是其他后果？
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 证据、反例或复现方式
+  - type: textarea
+    id: conditions
+    attributes:
+      label: 在什么条件下原主张仍可能成立？
+  - type: textarea
+    id: remedy
+    attributes:
+      label: 建议修改或验证方法
+  - type: input
+    id: language
+    attributes:
+      label: 原始语言
+      placeholder: zh-CN / en / ja / other
+    validations:
+      required: true
+  - type: dropdown
+    id: ai_used
+    attributes:
+      label: 是否使用AI辅助？
+      options:
+        - 否
+        - 是，已人工审阅
+        - 是，但尚未完整核查
+    validations:
+      required: true
+  - type: textarea
+    id: ai_details
+    attributes:
+      label: AI参与说明
